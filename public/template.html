@@ -1,0 +1,68 @@
+<div class="fitstore-layout">
+
+  <header class="header">
+    <div class="header-content">
+      <a href="/" class="header-logo">
+        <span class="logo-text">FitStore</span>
+      </a>
+
+      <div class="search-bar">
+        <input type="search" placeholder="Buscar produtos, marcas..." 
+               class="search-input" 
+               aria-label="Barra de busca de produtos">
+        <button class="search-button" (click)="">🔍</button>
+      </div>
+
+      <nav class="user-actions">
+        <a href="/login" class="action-link" (click)="">
+          👤 Login / Cadastro
+        </a>
+        <a href="/carrinho" class="action-link cart-link" (click)="">
+          🛒 Carrinho
+          <span class="cart-count">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    
+    <aside class="sidebar">
+      <h3>Filtros</h3>
+      
+      <section class="filter-group">
+        <h4>Categoria</h4>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" (change)=""> Roupas Fitness</label></li>
+          <li><label><input type="checkbox" (change)=""> Suplementos</label></li>
+          <li><label><input type="checkbox" (change)=""> Acessórios</label></li>
+        </ul>
+      </section>
+
+      <section class="filter-group">
+        <h4>Marca</h4>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" (change)=""> Marca A</label></li>
+          <li><label><input type="checkbox" (change)=""> Marca B</label></li>
+          <li><label><input type="checkbox" (change)=""> Marca C</label></li>
+        </ul>
+      </section>
+    </aside>
+
+   </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="contact-info">
+        <h4>Contato FitStore</h4>
+        <p>Email: contato@fitstore.com</p>
+        <p>Telefone: (55) 99999-9999</p>
+        <p>Endereço: Rua Angular, 18, Loja - Cidade/UF</p>
+      </div>
+      <div class="copyright">
+        &copy; 2025 FitStore. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+</div>

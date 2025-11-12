@@ -1,0 +1,21 @@
+    <aside class="sidebar">
+      <h3>Filtros</h3>
+      
+      <section class="filter-group">
+        <h4>Categoria</h4> 
+        <ul class="filter-list">
+          @for(categoria of listaCategorias; track categoria.id) {
+            <li><label><input type="checkbox" > {{categoria.descricao}}</label></li>  
+          }
+        </ul>
+      </section>
+
+      <section class="filter-group">
+        <h4>Marca</h4>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" > Marca A</label></li>
+          <li><label><input type="checkbox" > Marca B</label></li>
+          <li><label><input type="checkbox" > Marca C</label></li>
+        </ul>
+      </section>
+    </aside>

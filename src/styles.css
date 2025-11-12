@@ -1,1 +1,343 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* ========================================= */
+/* styles.css - CSS ÚNICO PARA O E-COMMERCE */
+/* ========================================= */
+
+/* Reset Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Layout Principal */
+.fitstore-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ocupa a altura total da tela */
+}
+
+/* ========================================= */
+/* 1. CABEÇALHO (HEADER) */
+/* ========================================= */
+
+.header {
+    background-color: #007bff;
+    /* Azul primário */
+    color: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Barra de Busca */
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    /* Permite que ocupe espaço */
+    max-width: 500px;
+    margin: 0 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.search-input {
+    border: none;
+    padding: 10px 15px;
+    flex-grow: 1;
+    font-size: 1em;
+}
+
+.search-button {
+    background-color: #0056b3;
+    /* Azul mais escuro */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-button:hover {
+    background-color: #004080;
+}
+
+/* Ações do Usuário/Carrinho */
+.user-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.action-link {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 5px;
+    transition: opacity 0.2s;
+}
+
+.action-link:hover {
+    opacity: 0.8;
+}
+
+.cart-link {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.cart-count {
+    background-color: #ffc107;
+    /* Amarelo de destaque */
+    color: #333;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 0.75em;
+    margin-left: 5px;
+}
+
+/* ========================================= */
+/* 2. CONTEÚDO PRINCIPAL (MAIN CONTENT) */
+/* ========================================= */
+
+.main-content {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 20px;
+    flex-grow: 1;
+    /* Empurra o rodapé para baixo */
+}
+
+/* SIDEBAR / FILTROS */
+.sidebar {
+    width: 250px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-right: 20px;
+    /* Estilo Fixo/Sticky (Se desejar que o menu role menos) */
+    /* position: sticky;
+    top: 20px; */
+    height: fit-content;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-group h4 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.filter-list {
+    list-style: none;
+}
+
+.filter-list li {
+    margin-bottom: 5px;
+}
+
+/* ÁREA DE PRODUTOS */
+.product-area {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+.product-area h1 {
+    margin-bottom: 15px;
+    font-size: 2em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Grade de Produtos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    /* Responsividade básica */
+    gap: 20px;
+    justify-content: start;
+}
+
+/* Card de Produto */
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    background-color: #eee;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #999;
+}
+
+.product-name {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.product-brand {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #28a745;
+    /* Verde de preço */
+    margin-bottom: 15px;
+}
+
+.buy-button {
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.buy-button:hover {
+    background-color: #ffae00;
+}
+
+/* ========================================= */
+/* 3. RODAPÉ (FOOTER) */
+/* ========================================= */
+
+.footer {
+    background-color: #343a40;
+    /* Cinza escuro */
+    color: white;
+    padding: 30px 20px;
+    margin-top: 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info h4 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.contact-info p {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.copyright {
+    font-size: 0.8em;
+    align-self: flex-end;
+    /* Alinha o copyright na parte inferior */
+    text-align: right;
+}
+
+/* ========================================= */
+/* RESPONSIVIDADE BÁSICA (Mobile First) */
+/* ========================================= */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-bar {
+        max-width: 100%;
+        margin: 0;
+        order: 3;
+        /* Coloca a busca por último no cabeçalho (em telas pequenas) */
+    }
+
+    .user-actions {
+        order: 2;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .main-content {
+        display: flex;
+        max-width: 1200px;
+        /*margin: 20px auto;*/
+        padding: 0 20px;
+        flex-grow: 1;
+        flex-direction: column;
+        /* Garante que o conteúdo principal se ajuste */
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        flex-shrink: 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .copyright {
+        text-align: left;
+    }
+
+    .product-area {
+        padding-left: 0;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Colunas menores para celular */
+    }
+}
