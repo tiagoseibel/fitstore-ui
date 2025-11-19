@@ -5,11 +5,10 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class Categoria {
+export class ProdutoService {
   private http = inject(HttpClient);
   
   listar(): Observable<any[]> {
-    return this.http.get<any[]>('http://localhost:8080/categorias');
+    return this.http.get<any[]>('http://localhost:8080/produtos');
   }
-
 }

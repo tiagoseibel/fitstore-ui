@@ -2,21 +2,16 @@
       <h1>Produtos em Destaque</h1>
       
       <div class="product-grid">
+        @for(produto of listaProdutos; track produto.id) {
         <article class="product-card">
           <div class="product-image">
-
-[Image of Product]
-</div>
-          <h2 class="product-name">Nome do Produto Top</h2>
-          <p class="product-brand">Marca XYZ</p>
-          <p class="product-price">R$ 99,90</p>
+            <img src="http://localhost:8080/produtos/{{produto.id}}/image" alt="Foto">
+          </div>
+          <h2 class="product-name">{{ produto.nome }}</h2>
+          <p class="product-brand">{{ produto.marca.descricao }}</p>
+          <p class="product-price">R$ {{ produto.preco }}</p>
           <button class="buy-button">Comprar</button>
         </article>
-        
-        <article class="product-card">...</article>
-        <article class="product-card">...</article>
-        <article class="product-card">...</article>
-        <article class="product-card">...</article>
-        
+        }        
       </div>
     </section>

@@ -16,6 +16,9 @@ export class Menu implements OnInit {
     this.service.listar().subscribe({
       next: (categorias) => {
         this.listaCategorias = categorias;
+      },
+      error: (erro) => {
+        console.error('Erro ao carregar categorias:', erro);
       }
     });
   }
